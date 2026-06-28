@@ -1,0 +1,12 @@
+{
+  "name": "kvrat-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:landing": "npm run dev --prefix apps/kvrat-landing",
+    "dev:backend": "npm run start:dev --prefix apps/backend",
+    "build:landing": "npm run build --prefix apps/kvrat-landing",
+    "build:backend": "npm run build --prefix apps/backend",
+    "start:launcher": "npm start --prefix launcher"
+  }
+}

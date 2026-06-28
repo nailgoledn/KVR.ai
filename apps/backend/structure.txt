@@ -1,0 +1,63 @@
+Folder PATH listing
+Volume serial number is 123D-F535
+C:\NILEGOLDEN\APPS\BACKEND\SRC
+?   app.controller.spec.ts
+?   app.controller.ts
+?   app.module.ts
+?   app.service.ts
+?   main.ts
+?   
+????auth
+?   ?   auth.controller.spec.ts
+?   ?   auth.controller.ts
+?   ?   auth.module.ts
+?   ?   auth.service.spec.ts
+?   ?   auth.service.ts
+?   ?   roles.decorator.ts
+?   ?   roles.guard.ts
+?   ?   
+?   ????dto
+?   ?       create-auth.dto.ts
+?   ?       login-auth.dto.ts
+?   ?       
+?   ????jwt
+?           jwt.guard.ts
+?           jwt.service.ts
+?           jwt.strategy.ts
+?           
+????common
+?   ????filters
+?   ????guards
+????modules
+?   ????media
+????users
+?   ?   users.controller.spec.ts
+?   ?   users.controller.ts
+?   ?   users.module.ts
+?   ?   users.service.spec.ts
+?   ?   users.service.ts
+?   ?   
+?   ????dto
+?   ?       create-user.dto.ts
+?   ?       update-user.dto.ts
+?   ?       
+?   ????entities
+?           user.entity.ts
+?           
+????wallet
+    ?   wallet-transaction.service.ts
+    ?   wallet.controller.spec.ts
+    ?   wallet.controller.ts
+    ?   wallet.module.ts
+    ?   wallet.service.spec.ts
+    ?   wallet.service.ts
+    ?   
+    ????dto
+    ?       create-wallet.dto.ts
+    ?       transaction-filter.dto.ts
+    ?       update-wallet.dto.ts
+    ?       
+    ????entities
+            transaction.entity.ts
+            wallet.entity.ts
+            

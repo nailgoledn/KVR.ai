@@ -1,0 +1,106 @@
+/* دستور التنسيق المطور بروابط صور بديلة جاهزة من الإنترنت */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght=400;700;900&display=swap');
+
+body.user-app {
+    --main-theme-color: #018ac8;
+    --accent-color: #01e5f4;
+    --bg-primary: #0b0f19;
+    --text-primary: #e2e8f0;
+    --hero-overlay: rgba(11, 15, 25, 0.6);
+}
+
+body.vendor-app {
+    --main-theme-color: #c7280c;
+    --accent-color: #f7941d;
+    --bg-primary: #0b0f19;
+    --text-primary: #ffffff;
+    --hero-overlay: rgba(11, 15, 25, 0.85);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Cairo', sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+/* تم استبدال الملف المحلي برابط صورة تكنولوجية صناعية بديلة (صورة 1233) */
+.hero-section {
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--hero-overlay), var(--bg-primary)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--main-theme-color);
+}
+
+.brand-logo-img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.trust-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px auto 0 auto;
+    max-width: 800px;
+}
+
+.global-form {
+    background: #111827;
+    border: 1px solid var(--main-theme-color);
+    border-radius: 12px;
+    padding: 35px;
+    max-width: 650px;
+    margin: 40px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--main-theme-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+.kvrat-btn {
+    background: var(--main-theme-color);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bot-box {
+    background: #1f2937;
+    border-right: 4px solid var(--accent-color);
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 4px;
+}

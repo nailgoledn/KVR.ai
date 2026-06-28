@@ -1,0 +1,12 @@
+{
+  "name": "kvrat-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}

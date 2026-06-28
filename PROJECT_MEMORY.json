@@ -1,0 +1,10 @@
+{
+    "project": "KVRAT.ai",
+    "backend": "NestJS",
+    "frontend": "Next.js",
+    "mobile": "Flutter",
+    "launcher": "Electron",
+    "database": "SQLite",
+    "status": "active",
+    "version": "1.0.0"
+  }

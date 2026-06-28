@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KVRAT Launcher</title>
+  <style>
+    body {
+      background:#111;
+      color:#0f0;
+      font-family: Arial;
+      padding:20px;
+    }
+    button {
+      padding:10px;
+      margin:5px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🚀 KVRAT CONTROL PANEL</h1>
+
+<button onclick="startBackend()">▶ Start Backend</button>
+<button onclick="startFrontend()">▶ Start Frontend</button>
+<button onclick="stopAll()">⛔ Stop All</button>
+
+<script>
+const { ipcRenderer } = require("electron");
+
+function startBackend(){
+  ipcRenderer.send("start-backend");
+}
+
+function startFrontend(){
+  ipcRenderer.send("start-frontend");
+}
+
+function stopAll(){
+  ipcRenderer.send("stop-all");
+}
+</script>
+
+</body>
+</html>

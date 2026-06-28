@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "KVRAT Backend System",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "backup": "node scripts/backup.js",
+    "backup:auto": "node scripts/auto-backup.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

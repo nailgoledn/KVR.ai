@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KVRAT.ai | المنصة الذكية</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#fff;
+color:#222;
+overflow-x:hidden;
+
+}
+
+:root{
+
+--blue:#12B8FF;
+--orange:#FF7A00;
+--black:#090909;
+--gray:#f7f7f7;
+
+}
+
+a{
+
+text-decoration:none;
+color:inherit;
+
+}
+
+.container{
+
+width:92%;
+max-width:1400px;
+margin:auto;
+
+}
+
+nav{
+
+position:fixed;
+top:0;
+right:0;
+left:0;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(20px);
+
+z-index:999;
+
+border-bottom:1px solid #eee;
+
+}
+
+.navbar{
+
+height:85px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.logo img{
+
+height:55px;
+
+}
+
+.logo h2{
+
+font-size:30px;
+
+font-weight:900;
+
+}
+
+.logo span{
+
+color:var(--blue);
+
+}
+
+.menu{
+
+display:flex;
+
+gap:35px;
+
+font-weight:700;
+
+}
+
+.menu a{
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:var(--blue);
+
+}
+
+.hero{
+
+margin-top:85px;
+
+background:#000;
+
+color:#fff;
+
+padding:120px 0;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+background:rgba(18,184,255,.10);
+
+border-radius:50%;
+
+left:-180px;
+
+top:-120px;
+
+filter:blur(60px);
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+background:rgba(255,122,0,.15);
+
+right:-100px;
+
+bottom:-80px;
+
+border-radius:50%;
+
+filter:blur(60px);
+
+}
+
+.hero-content{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:60px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.hero-text h1{
+
+font-size:65px;
+
+font-weight:900;
+
+line-height:1.2;
+
+margin-bottom:25px;
+
+}
+
+.hero-text h1 span{
+
+color:var(--blue);
+
+}
+
+.hero-text p{
+
+font-size:22px;
+
+line-height:2;
+
+color:#ddd;
+
+margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn{
+
+padding:16px 34px;
+
+border-radius:12px;
+
+font-size:18px;
+
+font-weight:800;
+
+transition:.4s;
+
+display:inline-block;
+
+}
+
+.primary{
+
+background:var(--orange);
+
+color:#fff;
+
+}
+
+.primary:hover{
+
+background:var(--blue);
+
+}
+
+.secondary{
+
+border:2px solid #fff;
+
+color:#fff;
+
+}
+
+.secondary:hover{
+
+background:#fff;
+
+color:#000;
+
+}
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.hero-image img{
+
+width:380px;
+
+max-width:100%;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-15px);}
+
+100%{transform:translateY(0);}
+
+}
+
+.quote{
+
+margin-top:35px;
+
+font-size:24px;
+
+font-weight:700;
+
+color:#12B8FF;
+
+}
+
+@media(max-width:900px){
+
+.hero-content{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container navbar">
+
+<div class="logo">
+
+<img src="assets/logo.png" alt="KVRAT">
+
+<h2>KVRAT<span>.ai</span></h2>
+
+</div>
+
+<div class="menu">
+
+<a href="#">الرئيسية</a>
+
+<a href="#">المنتجات</a>
+
+<a href="#">القطاعات</a>
+
+<a href="#">عن المنصة</a>
+
+<a href="#">تواصل معنا</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<h1>
+
+مرحباً بك في
+
+<span>KVRAT.ai</span>
+
+</h1>
+
+<p>
+
+منصة مصرية ذكية تربط المصنع والمورد والتاجر والمستخدم في منظومة واحدة تعتمد على الذكاء الاصطناعي لإدارة حلول الحماية والتغليف والتصنيع.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn primary">
+
+ابدأ الآن
+
+</a>
+
+<a href="#" class="btn secondary">
+
+تعرف أكثر
+
+</a>
+
+</div>
+
+<div class="quote">
+
+نسعى للعالمية من أرض الإسكندرية بفضل ثقتكم.
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="assets/logo.png" alt="KVRAT Logo">
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
+<img src="logo.png" alt="KVRAT">

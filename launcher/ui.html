@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KVRAT Control Center</title>
+
+<style>
+body{
+font-family:Arial;
+padding:30px;
+background:#111;
+color:white;
+text-align:center;
+}
+
+button{
+width:250px;
+height:60px;
+margin:10px;
+font-size:18px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>KVRAT Control Center</h1>
+
+<button onclick="window.kvratAPI.startBackend()">
+Start Backend
+</button>
+
+<button onclick="window.kvratAPI.startFrontend()">
+Start Frontend
+</button>
+
+<button onclick="window.kvratAPI.stopAll()">
+Stop All
+</button>
+
+</body>
+</html>
