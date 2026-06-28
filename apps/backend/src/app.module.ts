@@ -8,6 +8,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { BackupModule } from './modules/backup/backup.module';
 import { MediaModule } from './modules/media/media.module';
+import { PartnersModule } from './modules/partners/partners.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { MediaModule } from './modules/media/media.module';
     DashboardModule,
     BackupModule,
     MediaModule,
+    PartnersModule,
   ],
 })
 export class AppModule {}
