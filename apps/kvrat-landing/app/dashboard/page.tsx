@@ -22,10 +22,10 @@ function DashboardContent() {
     setResult(null);
 
     try {
-      const data = await generateBlueprint(input || 'ابني مصنع كفرات');
+      const data = await generateBlueprint(input || 'Build an AI-powered SaaS platform');
       setResult(data);
     } catch {
-      setResult({ error: 'فشل الاتصال بالـ API — تأكد أن Backend يعمل على المنفذ 4000' });
+      setResult({ error: 'Connection failed. Please ensure the backend is running on port 4000.' });
     } finally {
       setLoading(false);
     }
@@ -44,15 +44,15 @@ function DashboardContent() {
         }}
       >
         <Link href="/" style={{ color: '#94a3b8', textDecoration: 'none' }}>
-          ← العودة للرئيسية
+          ← Back to Home
         </Link>
 
-        <h1 style={{ marginTop: 24 }}>🧠 KVRAT AI Dashboard</h1>
+        <h1 style={{ marginTop: 24 }}>🧠 KVRAT AI Workspace</h1>
 
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="اكتب فكرتك هنا..."
+          placeholder="Describe your startup idea here..."
           style={{
             padding: 12,
             width: '100%',
@@ -83,7 +83,7 @@ function DashboardContent() {
             fontSize: 16,
           }}
         >
-          {loading ? '⏳ جاري التوليد...' : '🚀 إنشاء مخطط'}
+          {loading ? '⏳ Generating...' : '🚀 Generate Blueprint'}
         </button>
 
         <hr style={{ marginTop: 32, borderColor: '#1e293b' }} />

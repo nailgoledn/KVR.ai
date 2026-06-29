@@ -1,95 +1,114 @@
+'use client';
+
+import { Container } from '../ui/primitives';
+import { colors, spacing, typography } from '@/src/design-system';
+
 export default function HowItWorks() {
-    const steps = [
-      {
-        number: "01",
-        title: "اكتب فكرتك",
-        desc: "صف مشروعك باللغة الطبيعية دون الحاجة لأي خبرة برمجية.",
-      },
-      {
-        number: "02",
-        title: "تحليل الذكاء الاصطناعي",
-        desc: "يقوم KVRAT AI بتحليل الفكرة واستخراج جميع المتطلبات.",
-      },
-      {
-        number: "03",
-        title: "بناء المشروع",
-        desc: "يتم إنشاء الـ Backend والـ Frontend وقاعدة البيانات وواجهات API.",
-      },
-      {
-        number: "04",
-        title: "جاهز للإطلاق",
-        desc: "احصل على مشروع احترافي جاهز للتطوير أو النشر.",
-      },
-    ];
-  
-    return (
-      <section
-        id="how-it-works"
-        style={{
-          maxWidth: 1200,
-          margin: "100px auto",
-          padding: "0 30px",
-        }}
-      >
+  const steps = [
+    {
+      number: "01",
+      title: "Describe Your Idea",
+      description: "Tell us what you want to build. Use plain language—no coding knowledge needed.",
+    },
+    {
+      number: "02",
+      title: "AI Processes Request",
+      description: "Our autonomous agents analyze your requirements and create a complete technical blueprint.",
+    },
+    {
+      number: "03",
+      title: "Generate Full Stack",
+      description: "Backend, frontend, database, API endpoints, and admin dashboard are generated automatically.",
+    },
+    {
+      number: "04",
+      title: "Ready to Launch",
+      description: "Download production-ready code and deploy immediately, or iterate further with our platform.",
+    },
+  ];
+
+  return (
+    <section
+      id="how-it-works"
+      style={{
+        backgroundColor: colors.gray[50],
+        padding: `${spacing[16]} ${spacing[4]}`,
+      }}
+    >
+      <Container size="xl">
+        {/* Title */}
         <h2
           style={{
             textAlign: "center",
-            fontSize: 42,
-            color: "#fff",
-            marginBottom: 60,
+            fontSize: typography.fontSize['5xl'],
+            fontWeight: 700,
+            marginBottom: spacing[12],
+            color: colors.black,
+            fontFamily: typography.fontFamily.grotesk,
           }}
         >
-          كيف يعمل KVRAT.ai؟
+          How KVRAT.ai Works
         </h2>
-  
+
+        {/* Steps Grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
-            gap: 25,
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: spacing[6],
           }}
         >
           {steps.map((step) => (
             <div
               key={step.number}
               style={{
-                background: "#111827",
-                border: "1px solid #1E293B",
-                borderRadius: 20,
-                padding: 30,
+                backgroundColor: colors.white,
+                border: `1px solid ${colors.border}`,
+                borderRadius: '8px',
+                padding: spacing[6],
+                transition: 'all 200ms ease-out',
               }}
             >
+              {/* Step Number */}
               <div
                 style={{
-                  fontSize: 42,
-                  fontWeight: 800,
-                  color: "#00E5FF",
-                  marginBottom: 20,
+                  fontSize: typography.fontSize['5xl'],
+                  fontWeight: 700,
+                  color: colors.orange[500],
+                  marginBottom: spacing[4],
+                  fontFamily: typography.fontFamily.grotesk,
                 }}
               >
                 {step.number}
               </div>
-  
+
+              {/* Step Title */}
               <h3
                 style={{
-                  color: "#fff",
-                  marginBottom: 15,
+                  fontSize: typography.fontSize.lg,
+                  fontWeight: 600,
+                  color: colors.black,
+                  marginBottom: spacing[2],
                 }}
               >
                 {step.title}
               </h3>
-  
+
+              {/* Step Description */}
               <p
                 style={{
-                  color: "#CBD5E1",
-                  lineHeight: 1.8,
+                  fontSize: typography.fontSize.sm,
+                  color: colors.gray[600],
+                  lineHeight: 1.6,
+                  margin: 0,
                 }}
               >
-                {step.desc}
+                {step.description}
               </p>
             </div>
           ))}
         </div>
-      </section>
-    );
-  }
+      </Container>
+    </section>
+  );
+}

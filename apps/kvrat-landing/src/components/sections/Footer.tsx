@@ -1,33 +1,70 @@
+'use client';
+
+import { Container, Divider } from '../ui/primitives';
+import { colors, spacing } from '@/src/design-system';
+
 export default function Footer() {
+  const footerLinks = [
+    { label: 'الرئيسية', href: '#' },
+    { label: 'المنتجات', href: '#' },
+    { label: 'عن المنصة', href: '#' },
+    { label: 'تواصل', href: '#' },
+  ];
+
   return (
     <footer
       style={{
-        marginTop: 120,
-        padding: "60px 30px",
-        borderTop: "1px solid #1e293b",
-        background: "#020617",
-        color: "#94a3b8",
-        textAlign: "center",
+        backgroundColor: colors.black,
+        color: colors.gray[400],
+        marginTop: spacing[20],
       }}
     >
-      <div style={{ marginBottom: 20, fontSize: 20, color: "#fff" }}>
-        KVRAT.ai
-      </div>
+      <Container size="xl">
+        <div style={{ paddingTop: spacing[12], paddingBottom: spacing[12] }}>
+          {/* Logo */}
+          <div style={{ marginBottom: spacing[6], fontSize: '20px', color: colors.white, fontWeight: 600 }}>
+            KVRAT.ai
+          </div>
 
-      <p style={{ marginBottom: 20, lineHeight: 1.8 }}>
-        منصة ذكية لتحويل الأفكار إلى منتجات رقمية باستخدام الذكاء الاصطناعي
-      </p>
+          {/* Description */}
+          <p style={{ marginBottom: spacing[6], lineHeight: 1.8, maxWidth: '500px', color: colors.gray[400] }}>
+            منصة ذكية لتحويل الأفكار إلى منتجات رقمية باستخدام الذكاء الاصطناعي
+          </p>
 
-      <div style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
-        <span>الرئيسية</span>
-        <span>المنتجات</span>
-        <span>عن المنصة</span>
-        <span>تواصل</span>
-      </div>
+          <Divider style={{ backgroundColor: colors.gray[800], marginBottom: spacing[8] }} />
 
-      <div style={{ marginTop: 30, fontSize: 12, color: "#64748b" }}>
-        © 2026 KVRAT.ai - All rights reserved
-      </div>
+          {/* Links */}
+          <div style={{ display: 'flex', gap: spacing[8], justifyContent: 'flex-start', flexWrap: 'wrap' }}>
+            {footerLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                style={{
+                  color: colors.gray[400],
+                  textDecoration: 'none',
+                  fontSize: '14px',
+                  transition: 'color 200ms ease-out',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = colors.white;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = colors.gray[400];
+                }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <Divider style={{ backgroundColor: colors.gray[800], marginTop: spacing[8], marginBottom: spacing[8] }} />
+
+          {/* Copyright */}
+          <div style={{ fontSize: '12px', color: colors.gray[500], textAlign: 'center' }}>
+            © {new Date().getFullYear()} KVRAT.ai - All rights reserved
+          </div>
+        </div>
+      </Container>
     </footer>
   );
 }

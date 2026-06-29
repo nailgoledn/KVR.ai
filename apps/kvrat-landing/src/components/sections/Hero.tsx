@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Container, Button, Input } from '../ui/primitives';
+import { colors, spacing, typography } from '@/src/design-system';
 
 export default function Hero() {
   const [idea, setIdea] = useState('');
@@ -16,96 +18,80 @@ export default function Hero() {
     <section
       id="hero"
       style={{
-        padding: '120px 40px',
-        maxWidth: 1200,
-        margin: '0 auto',
-        textAlign: 'center',
+        backgroundColor: colors.white,
+        padding: `${spacing[20]} ${spacing[4]}`,
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
       }}
     >
-      <h1
-        style={{
-          fontSize: 64,
-          fontWeight: 800,
-          color: '#ffffff',
-          marginBottom: 24,
-        }}
-      >
-        KVRAT.ai
-      </h1>
+      <Container size="xl">
+        <div style={{ textAlign: 'center' }}>
+          {/* Headline */}
+          <h1
+            style={{
+              fontSize: typography.fontSize['7xl'],
+              fontWeight: 700,
+              color: colors.black,
+              marginBottom: spacing[6],
+              fontFamily: typography.fontFamily.grotesk,
+              lineHeight: 1.1,
+            }}
+          >
+            KVRAT.ai
+          </h1>
 
-      <p
-        style={{
-          fontSize: 24,
-          color: '#94a3b8',
-          maxWidth: 900,
-          margin: '0 auto 50px',
-          lineHeight: 1.7,
-        }}
-      >
-        منصة ذكاء اصطناعي تحول فكرتك إلى مشروع متكامل يشمل
-        <br />
-        Backend و Frontend و API و Dashboard خلال دقائق.
-      </p>
+          {/* Subheadline */}
+          <p
+            style={{
+              fontSize: typography.fontSize.xl,
+              color: colors.gray[600],
+              maxWidth: '900px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginBottom: spacing[12],
+              lineHeight: 1.6,
+            }}
+          >
+            Transform your startup idea into a production-ready application.
+            <br />
+            Backend, Frontend, API, and Dashboard—generated in minutes with autonomous AI agents.
+          </p>
 
-      <input
-        value={idea}
-        onChange={(e) => setIdea(e.target.value)}
-        placeholder="مثال: أنشئ منصة لإدارة موردي الإطارات"
-        style={{
-          width: '100%',
-          maxWidth: 720,
-          padding: 22,
-          borderRadius: 16,
-          border: '1px solid #334155',
-          background: '#111827',
-          color: '#fff',
-          fontSize: 18,
-          outline: 'none',
-        }}
-      />
+          {/* Input Field */}
+          <div style={{ maxWidth: '720px', marginLeft: 'auto', marginRight: 'auto', marginBottom: spacing[8] }}>
+            <Input
+              value={idea}
+              onChange={(e) => setIdea(e.target.value)}
+              placeholder="Example: Build an AI-powered booking platform for gyms"
+            />
+          </div>
 
-      <div
-        style={{
-          marginTop: 30,
-          display: 'flex',
-          justifyContent: 'center',
-          gap: 20,
-          flexWrap: 'wrap',
-        }}
-      >
-        <button
-          onClick={goToDashboard}
-          style={{
-            background: '#00E5FF',
-            color: '#001018',
-            border: 'none',
-            borderRadius: 14,
-            padding: '18px 34px',
-            fontSize: 18,
-            fontWeight: 700,
-            cursor: 'pointer',
-          }}
-        >
-          ابدأ الآن
-        </button>
+          {/* Action Buttons */}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: spacing[4],
+              flexWrap: 'wrap',
+            }}
+          >
+            <Button size="lg" onClick={goToDashboard}>
+              Generate Blueprint
+            </Button>
 
-        <button
-          onClick={() => {
-            document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          style={{
-            background: 'transparent',
-            color: '#ffffff',
-            border: '1px solid #475569',
-            borderRadius: 14,
-            padding: '18px 34px',
-            fontSize: 18,
-            cursor: 'pointer',
-          }}
-        >
-          شاهد كيف يعمل
-        </button>
-      </div>
+            <Button
+              size="lg"
+              variant="secondary"
+              onClick={() => {
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              See How It Works
+            </Button>
+          </div>
+        </div>
+      </Container>
     </section>
   );
 }
